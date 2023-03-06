@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL here](https://github.com/uvdevelop26/advice-generator-app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://uvdevelop26.github.io/advice-generator-app/)
 
 ## My process
 
@@ -61,6 +61,6 @@ in this project I learned the very basics of it
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/uvdevelop26)
+- Frontend Mentor - [@uvdevelop26](https://www.frontendmentor.io/profile/uvdevelop26)
 
 
