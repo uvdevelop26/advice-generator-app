@@ -1,12 +1,20 @@
 //se debe generar un nuevo consejo cuando se oprime el botón
 const adviceApi = 'https://api.adviceslip.com/advice';
 const generateAdvice = document.querySelector('.icon-dice');
+let randomId = 0;
+const adviceId = document.querySelector('.advice-nro');
+const adviceText = document.querySelector('.advice');
 
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-let randomId = 0;
+function insertAdvice(id, adv) {
+    adviceId.innerText = 'Advice #' + id;
+    adviceText.innerText = adv
+}
+
+
 
 
 window.addEventListener('load', () => {
@@ -15,11 +23,7 @@ window.addEventListener('load', () => {
     fetch(adviceApi + '/' + randomId)
         .then((response) => response.json())
         .then((advice) => {
-            const adviceId = document.querySelector('.advice-nro');
-            const adviceText = document.querySelector('.advice');
-
-            adviceId.innerText = 'Advice #' + advice.slip.id
-            adviceText.innerText = advice.slip.advice
+            insertAdvice(advice.slip.id, advice.slip.advice);
         })
 
 });
@@ -30,11 +34,7 @@ generateAdvice.addEventListener('click', () => {
     fetch(adviceApi + '/' + randomId)
         .then((response) => response.json())
         .then((advice) => {
-            const adviceId = document.querySelector('.advice-nro');
-            const adviceText = document.querySelector('.advice');
-
-            adviceId.innerText = 'Advice #' + advice.slip.id
-            adviceText.innerText = advice.slip.advice
+            insertAdvice(advice.slip.id, advice.slip.advice);
         })
 
 });
